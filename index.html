@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>Parallel Computing finals</title>
   </head>
   <body>
@@ -75,16 +76,84 @@
           program that prompts the user to enter the length of the three sides
           of a triangle and then outputs a message indicating whether the
           triangle is a right triangle.
+
+          <div class="code-container">
+            <div class="code">
+              <pre>
+from math import pow, sqrt
+
+side_a = float(input('Enter side a: '))
+side_b = float(input('Enter side b: '))
+hypotenuse = float(input('Enter hypotenuse: '))
+
+if hypotenuse == round(sqrt(pow(side_a, 2) + pow(side_b, 2)), 2):
+    print('Triangle is a right triangle')
+else:
+    print('Triangle is not a right triangle')
+                    </pre
+              >
+            </div>
+
+            <div class="output">
+              <img
+                src="./assets/two-two.png"
+                alt="Level two question two output"
+              />
+            </div>
+          </div>
         </li>
         <li>
           Write a program that prompts the user to input a number between 0 and
           35. If the number is less than or equal to 9, the program should
           output the number, otherwise, it should output A for 10, B for 11, C
           for 12... and Z for 35.
+
+          <div class="code-container">
+            <div class="code">
+              <pre>
+
+from string import ascii_uppercase
+
+input_num = int(input('Enter a number from 0 - 35: '))
+
+if input_num in range(0, 36):
+    if input_num in range(0, 10):
+        print(input_num)
+    else:
+        print(ascii_uppercase[input_num - 10])
+else:
+    print('Invalid input!')
+                </pre
+              >
+            </div>
+
+            <div class="output">
+              <img
+                src="./assets/two-three.png"
+                alt="Level two question three output"
+              />
+            </div>
+          </div>
         </li>
         <li>
           Write a program that will display all numbers divisible by 3, 4 and 5
           from 1-50.
+
+          <div class="code-container-col">
+            <div class="code">
+              <pre>
+print('Numbers divisible by 3, 4 and 5 from 1-50: ')
+print([num for num in range(1, 51) if num % 3 == 0 or num % 4 == 0 or num % 5 == 0])
+              </pre>
+            </div>
+
+            <div class="output">
+              <img
+                src="./assets/two-four.png"
+                alt="Level two question four output"
+              />
+            </div>
+          </div>
         </li>
       </ol>
     </div>
@@ -135,6 +204,62 @@
           numbers in ascending order. If it's "desc", then the list should be in
           descending order, and if it's "none", it should return the original
           list unaltered.
+
+          <div class="code-container">
+            <div class="code">
+              <pre>
+import random
+
+
+def sort(nums, sort_by):
+    sorted = [num for num in nums]
+
+    if sort_by == 'asc':
+        for i in range(len(sorted)):
+            current_smallest_index = i
+
+            for j in range(i + 1, len(nums)):
+                if sorted[j] < sorted[current_smallest_index]:
+                    current_smallest_index = j
+
+            temp = sorted[i]
+            sorted[i] = sorted[current_smallest_index]
+            sorted[current_smallest_index] = temp
+
+        return sorted
+
+    elif sort_by == 'desc':
+        for i in range(len(sorted)):
+            current_largest_index = i
+
+            for j in range(i + 1, len(sorted)):
+                if sorted[j] > sorted[current_largest_index]:
+                    current_largest_index = j
+
+            temp = sorted[i]
+            sorted[i] = sorted[current_largest_index]
+            sorted[current_largest_index] = temp
+
+        return sorted
+
+    return nums
+
+
+nums = [random.randint(0, 99) for _ in range(10)]
+
+print(sort(nums, 'none'))
+print(sort(nums, 'asc'))
+
+                </pre
+              >
+            </div>
+            <div class="output">
+              <img
+                src="./assets//three-three.png"
+                alt="Level three question three output"
+              />
+            </div>
+          </div>
         </li>
       </ol>
     </div>
@@ -152,12 +277,134 @@
           <li>All numbers divisible by 9</li>
           <li>All prime numbes</li>
           <li>All numbers that contains the digit 9 (e.g. 29, 91, 393, 961)</li>
+
+          <div class="code-container-col">
+            <div class="code">
+              <pre>
+import random
+from math import sqrt
+
+
+def is_prime(num):
+
+    for i in range(2, int(sqrt(num)) + 1):
+        if num % i == 0:
+            return False
+
+    return True
+
+
+nums = [random.randint(100, 999) for _ in range(100)]
+
+evens = [num for num in nums if num % 2 == 0]
+odds = [num for num in nums if num % 2 != 0]
+divisible_by_9 = [num for num in nums if num % 9 == 0]
+contains_9 = [num for num in nums if str(num).count('9') > 0]
+primes = [num for num in nums if is_prime(num)]
+
+print(f'All elements in the list: {nums}')
+print()
+
+print(f'Even numbers: {evens}')
+print()
+
+print(f'Odd numbers: {odds}')
+print()
+
+print(f'Numbers divisible by 9: {divisible_by_9}')
+print()
+
+print(f'Prime numbers: {primes}')
+print()
+
+print(f'Numbers that contains the digit 9: {contains_9}')
+print()
+
+                </pre
+              >
+            </div>
+            <div class="output">
+              <img
+                src="./assets/four-one.png"
+                alt="Level four question one output"
+              />
+            </div>
+          </div>
         </ul>
         <li>
           Given a linked list of size K, your task is to complete the function
           sum_of_lastN_nodes(), which should return the sum of last N nodes of
           the linked list. The function takes two arguments as input, the
           reference pointer of the head of the linked list and the integer N.
+
+          <div class="code-container">
+            <div class="code">
+              <pre>
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+class LinkedList:
+    def __init__(self, head):
+        self.head = head
+
+    def add_node(self, data):
+        current_node = self.head
+
+        while current_node is not None:
+            if current_node.next is None:
+                new_node = Node(data)
+                current_node.next = new_node
+                break
+            current_node = current_node.next
+
+        return new_node
+
+    def print_nodes(self):
+        current_node = self.head
+
+        while current_node:
+            print(current_node.data, end=' ')
+
+            current_node = current_node.next
+
+        print()
+
+    def sum_of_last_nodes(self, node, n):
+        nodes = []
+        current_node = node
+
+        while current_node:
+            nodes.append(current_node.data)
+
+            current_node = current_node.next
+
+        nodes = nodes[0-n:]
+
+        return sum(nodes)
+
+
+head = Node(5)
+llist = LinkedList(head)
+llist.add_node(10)
+head = llist.add_node(6)
+llist.add_node(4)
+llist.add_node(1)
+llist.add_node(12)
+print(llist.sum_of_last_nodes(head, 3))
+
+                </pre
+              >
+            </div>
+            <div class="output">
+              <img
+                src="./assets/four-two.png"
+                alt="Level four question two output"
+              />
+            </div>
+          </div>
         </li>
       </ol>
     </div>
