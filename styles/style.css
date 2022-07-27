@@ -33,3 +33,92 @@ p {
 ol {
   font-size: 1.2rem;
 }
+
+@media only screen and (max-width: 1536px) {
+  #four-one {
+    width: 85rem;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+    #four-one {
+      width: 73rem;
+    }
+  }
+  
+
+@media only screen and (max-width: 1024px) {
+  .code-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #two-four {
+    width: 60rem;
+  }
+
+  #four-one {
+    width: 55rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .code-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #two-four {
+    width: 45rem;
+  }
+
+  #four-one {
+    width: 40rem;
+  }
+  
+  pre {
+    white-space: pre-wrap;
+    font-size: 1rem;
+  }
+  
+  p {
+    font-size: 1.1rem;
+  }
+  
+  ol {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .code-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #two-two {
+    width: 35rem;
+  }
+
+  #two-three {
+    width: 35rem;
+  }
+
+  #two-four {
+    width: 35rem;
+  }
+
+  #three-three {
+    width: 35rem;
+  }
+
+  #four-one {
+    width: 33rem;
+  }
+
+  #four-two {
+    width: 35rem;
+  }
+}
