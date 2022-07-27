@@ -1,0 +1,17 @@
+body {
+    background-color: #0e1415;
+    color: rgba(255, 255, 255, 0.837);
+}
+
+.code-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.code-container-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
