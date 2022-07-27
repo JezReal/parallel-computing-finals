@@ -8,13 +8,32 @@
   </head>
   <body>
     <div>
-      <h1>Parallel and Distributed Computing Final Exam</h1>
+      <h1 style="text-align: center">
+        Parallel and Distributed Computing Final Exam
+      </h1>
     </div>
 
     <div>
       <h3>Level 1:</h3>
       <ol start="4">
-        <li>Explain what pipelining is.</li>
+        <li>
+          Explain what pipelining is.
+          <p>
+            - In parallel computing, pipelining is a strategy in which an
+            operation or computational task is broken down into different stages
+            which are run by different processors. The inputs that are required
+            in the tasks are being fed into it. It is also worth noting that
+            these stages must be executed in a particular order for it to be
+            completed successfully. For a better understanding, imagine a lot of
+            packages/boxes running through a conveyor belt. These
+            <i>"boxes"</i> or <i>"packages"</i> can be thought of as the tasks
+            that are broken down. While these <i>"packages"</i> are running
+            through the conveyor belt, more stuff are being added onto it such
+            as the contents, or branding. We can think of the
+            <i>"contents"</i> and <i>"branding</i> as the inputs that are being
+            fed into these tasks.
+          </p>
+        </li>
       </ol>
     </div>
 
@@ -24,6 +43,31 @@
         <li>
           How does parallel programming/computing works? What do you think will
           be the advantage of utilizing parallel approach?
+          <p>
+            - Parallel programming/computing works by taking advantage of the
+            multiple processors to be able to process more tasks at once.
+            Instead of using only one processor in running tasks, it also uses
+            other available processors to be able to execute instructions
+            parallel to each other.
+          </p>
+          <p style="text-indent: 10px">
+            There are a number of advantages in using a parallel approach one of
+            them being the amount of time that is saved. Because parallel
+            computing takes advantage of multiple processors in executing tasks,
+            it is therefore able to save time because instead of waiting for the
+            other tasks to complete before proceeding to the next, it is already
+            running therefore saving time.
+          </p>
+
+          <p style="text-indent: 10px">
+            Another advantage of using parallel computing is the ability to
+            solve larger and more complex problems. In fact, one of the primary
+            purposes of parallel computing is to solve computationally expensive
+            tasks. Because there are multiple processors that are working on
+            finding the solution, they can work together and solve the problem
+            faster and consequently, be able to solve more complex problems as
+            well.
+          </p>
         </li>
         <li>
           In a right triangle, the square of the length of one side is equal to
@@ -50,10 +94,38 @@
       <ol>
         <li>
           Differentiate between Multiprocessing and Multithreading. Explain.
+          <p>
+            - Multiprocessing refers to a system that has more than one
+            processor. These processors can then have multiple threads.
+            Multithreading on the other hand, refers to the ability of a
+            processor to execute multiple threads. A main difference to note
+            between the two is that in multithreading, all the threads that
+            belong in the same process share their memory and resources.
+            Meanwhile, in multiprocessing, each process is being allocated their
+            own memory and resources.
+          </p>
         </li>
         <li>
           Explain the difference between Serial Computing and Parallel
           Computing.
+          <p>
+            - Serial computing, from the name itself, is a type of computing
+            wherein tasks are being executed in series or in a line. Parallel
+            computing however, is a type of computing in which tasks are being
+            executed parallel to each other or in simpler terms, they are being
+            executed at the same time. A good way of looking at it is take for
+            an example a queue for a cash register. In serial computing, there
+            is only one cash register and a lot of people are lining up for this
+            one cash register. This is serial computing. The people in line are
+            the tasks that has to be processed and the cash register is the
+            processor. In serial processing, each task has to wait for their
+            turn.In parallel computing, on the other hand, has multiple cash
+            registers. Because there are multiple cash registers, people can
+            line up for other cash registers with fewer people in line so they
+            can finish faster. This is parallel computing. Multiple tasks (or
+            people in the illustration) can be processed at the same time making
+            the overall process much faster.
+          </p>
         </li>
         <li>
           Create a function in Python that accepts two parameters. The first
