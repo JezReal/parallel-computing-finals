@@ -1,17 +1,31 @@
 body {
-    background-color: #0e1415;
-    color: rgba(255, 255, 255, 0.837);
+  background-color: #0e1415;
+  color: rgba(255, 255, 255, 0.837);
+  padding: 1rem;
 }
 
 .code-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .code-container-col {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+pre {
+  white-space: pre-wrap;
+  font-size: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
 }
