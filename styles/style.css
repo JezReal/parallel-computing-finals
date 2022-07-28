@@ -17,6 +17,10 @@ body {
   align-items: center;
 }
 
+.code-container-col .code {
+  margin-bottom: 2rem;
+}
+
 .code {
   padding: 0.5rem;
   transition: box-shadow 0.3s;
@@ -53,6 +57,18 @@ ol {
   #four-one {
     width: 73rem;
   }
+
+  #two-two {
+    width: 35rem;
+  }
+
+  #two-three {
+    width: 40rem;
+  }
+
+  #three-three {
+    width: 35rem;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -67,6 +83,10 @@ ol {
 
   #four-one {
     width: 55rem;
+  }
+
+  .code {
+    margin-bottom: 2rem;
   }
 }
 
@@ -90,6 +110,10 @@ ol {
 
   ol {
     font-size: 1.1rem;
+  }
+
+  .code:hover {
+    box-shadow: 2px 3px #63bcff;
   }
 }
 
