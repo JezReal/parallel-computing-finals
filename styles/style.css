@@ -41,11 +41,10 @@ ol {
 }
 
 @media only screen and (max-width: 1280px) {
-    #four-one {
-      width: 73rem;
-    }
+  #four-one {
+    width: 73rem;
   }
-  
+}
 
 @media only screen and (max-width: 1024px) {
   .code-container {
@@ -63,12 +62,6 @@ ol {
 }
 
 @media only screen and (max-width: 768px) {
-  .code-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
   #two-four {
     width: 45rem;
   }
@@ -76,28 +69,22 @@ ol {
   #four-one {
     width: 40rem;
   }
-  
+
   pre {
     white-space: pre-wrap;
     font-size: 1rem;
   }
-  
+
   p {
     font-size: 1.1rem;
   }
-  
+
   ol {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 
 @media only screen and (max-width: 640px) {
-  .code-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   #two-two {
     width: 35rem;
   }
@@ -120,5 +107,24 @@ ol {
 
   #four-two {
     width: 35rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  #four-one {
+    width: 30rem;
+  }
+
+  pre {
+    white-space: pre-wrap;
+    font-size: 0.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  ol {
+    font-size: 1rem;
   }
 }
