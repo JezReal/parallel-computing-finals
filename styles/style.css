@@ -17,6 +17,15 @@ body {
   align-items: center;
 }
 
+.code {
+  padding: 0.5rem;
+  transition: box-shadow 0.3s;
+}
+
+.code:hover {
+  box-shadow: 2px 5px #63bcff;
+}
+
 h1 {
   text-align: center;
 }
